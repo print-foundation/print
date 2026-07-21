@@ -1,6 +1,7 @@
-# AGENTS.md
+# Copilot Instructions
 
-Guidance for AI agents and contributors working in this repository.
+This file contains the project instructions for GitHub Copilot.
+For the full, up-to-date instructions, see `AGENTS.md` in the repository root.
 
 ## Project
 

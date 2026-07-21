@@ -1,0 +1,13 @@
+---
+description: Go test conventions
+globs:
+  - "**/*_test.go"
+---
+When editing Go test files in this repository:
+
+- Use `github.com/stretchr/testify` for assertions (`assert` and `require`).
+- Keep tests deterministic; avoid network and time dependencies when possible.
+- Use `t.Parallel()` for independent tests.
+- Use `t.TempDir()` for temporary directories; never write outside it.
+- Follow `gofmt` style; run `gofmt -l .` before finishing.
+- Run `go test ./...` to verify.

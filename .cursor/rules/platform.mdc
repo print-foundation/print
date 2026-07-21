@@ -1,0 +1,16 @@
+---
+description: Platform-specific file conventions
+globs:
+  - "internal/**/*_linux.go"
+  - "internal/**/*_darwin.go"
+  - "internal/**/*_windows.go"
+  - "internal/**/*_freebsd.go"
+  - "internal/**/*_fallback.go"
+---
+When editing platform-specific files:
+
+- Every platform file must have a `//go:build <os>` tag at the top.
+- Always provide a `_fallback.go` file for unsupported platforms.
+- Never add plaintext URLs; all network fetches must be HTTPS.
+- Never execute downloaded content directly.
+- Keep platform logic isolated; share types and interfaces from non-platform files.

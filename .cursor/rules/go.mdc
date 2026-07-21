@@ -1,0 +1,13 @@
+---
+description: Go source conventions
+globs:
+  - "**/*.go"
+  - "!**/*_test.go"
+---
+When editing Go source files in this repository:
+
+- Follow `gofmt` style; run `gofmt -l .` before finishing.
+- Keep imports organized; group standard library, then third-party, then internal.
+- Preserve domain terms: `UEFI`, `GPT`, `SHA-256`, `PGP`.
+- Add lowercase why-focused comments for non-obvious logic.
+- Match existing package conventions in the same directory.
