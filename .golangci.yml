@@ -1,0 +1,33 @@
+﻿run:
+  timeout: 5m
+  tests: true
+
+linters:
+  enable:
+    - errcheck
+    - gosimple
+    - govet
+    - ineffassign
+    - staticcheck
+    - unused
+    - gofmt
+    - goimports
+    - misspell
+    - revive
+
+issues:
+  exclude-rules:
+    - path: _(windows|linux|darwin|freebsd|fallback)\.go$
+      linters:
+        - revive
+    - path: _test.go
+      linters:
+        - revive
+    - path: internal/plugin/plugin_test\.go$
+      linters:
+        - unused
+    - path: internal/hardware/exec\.go$
+      linters:
+        - unused
+  max-issues-per-linter: 0
+  max-same-issues: 0
